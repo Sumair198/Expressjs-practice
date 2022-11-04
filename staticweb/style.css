@@ -1,0 +1,63 @@
+.navbar
+{
+    
+   background-color: aqua !important;
+    font-weight: bold;
+}
+.fa-shopping-basket
+{
+    font-size: 27px !important;
+    margin: 10px;
+}
+.fa-truck, .fa-phone-square,.fa-thumbs-up
+{
+    font-size: 31px !important;
+    
+}
+.main1
+{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.service1
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px;
+    padding: 5px;
+    border: 2px solid black;
+    box-shadow: 5px 8px #888888;
+}
+h3
+{
+    color: #888888;
+    margin: 3px;
+}
+.heading-products
+{
+    text-align: center;
+    text-shadow: 2px 2px #ff4500 ;
+}
+.container
+{
+    display: flex;
+    justify-content: space-around;
+}
+.card > img
+{
+    height: 250px;
+}
+.card
+{
+    margin-top: 20px;
+}
+.footer
+{
+    text-align: center;
+    color: #888888;
+    background-color: #ff4500;
+    height: 60px;
+    margin-top: 10px;
+    padding: 5px;
+}
