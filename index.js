@@ -220,31 +220,102 @@
 // app.get('/array' , [cb1,cb2,cb3])
 
 //chained route //Path same method change only
+// const express = require('express')
+// const app = express()
+// const port = process.env.PORT || '5000'
+// app.route('/student')
+//     .get((req, res) => {
+//         res.send('Get Student')
+//     })
+//     .post((req, res) => {
+//         res.send('Add Student')
+//     })
+//     .put((req, res) => {
+//         res.send('Update Student')
+//     })
+
+//validation
+
+// app.route('/student')
+//     .all((req, res,next) => {
+//         console.log('first')
+//         res.send('All method')
+//         next()
+//     })
+//     .get((req, res) => {
+//         console.log('get method')
+//         res.send('All student')
+//     })
+
+//     .post((req, res) => {
+//         console.log('Post method')
+//         res.send('Add Student')
+//     })
+//     .put((req, res) => {
+//         console.log('Put method')
+//         res.send('Update student')
+//     })
+
+//Router
+// const stu = require('./router/student')
+
+// app.use('/student',stu)
+
+//Route parameter /dynamic route
+
+// const express = require('express')
+// const app = express()
+// const port = process.env.PORT || '5000'
+
+// app.get('/student/delete/:dept/:id',(req,res)=>  //:id likho gay to dynamic hojay ga
+// {
+//     console.log(req.params)
+//     res.send(`Student Deleted Sid is :  ${req.params.id}`)
+// })
+
+// app.get('/product/:category/:id',(req,res)=>  
+// {
+//     console.log(req.params)
+//     res.send(`Product`)
+// })
+    
+// app.get('/train/:from-:to',(req,res)=>  //:id likho gay to dynamic hojay ga
+// {
+//     console.log(req.params)
+//     res.send(`Train : From ${req.params.from} to ${req.params.to}`)
+// })
+
+//Restriction in path
+
+// app.get('/student/delete/:id([0-9]{2})',(req,res)=> 
+// {
+//     console.log(req.params)
+//     res.send(`Student Deleted Sid is :  ${req.params.id}`)
+// })
+
+// jo path me dun ga wo chaly ga 
+// app.get('/:type(employee|worker)/:id([0-9]{2})',(req,res)=> 
+// {
+//     console.log(req.params)
+//     res.send(`Employee | Worker :  ${req.params.id}`)
+// })
+
+//query string
+// app.get('/product' , (req,res)=>
+// {
+//     console.log(req.query)
+//     res.send('Response')
+// })
+
+//Controller / file k andr controller banaya hy / use hbs to get html file
 const express = require('express')
 const app = express()
 const port = process.env.PORT || '5000'
+const route = require('./router/student')
 
-app.route('/student')
-    .all((req, res,next) => {
-        console.log('first')
-        res.send('All method')
-        next()
-    })
-    .get((req, res) => {
-        console.log('get method')
-        res.send('All student')
-    })
-
-    .post((req, res) => {
-        console.log('Post method')
-        res.send('Add Student')
-    })
-    .put((req, res) => {
-        console.log('Put method')
-        res.send('Update student')
-    })
-
-
+app.set('view engine','hbs')// hbs example
+//load routes
+app.use('/cExample1',route) //simple controller example
 
 app.listen(port, () => {
     console.log(`Server listening at port ${port}`)

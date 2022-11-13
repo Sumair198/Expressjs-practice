@@ -1,5 +1,5 @@
 {
-  "name": "hello-world-practice",
+  "name": "router-practice",
   "version": "1.0.0",
   "description": "hello-world",
   "main": "index.js",
@@ -14,5 +14,13 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sumair198/Expressjs-practice.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Sumair198/Expressjs-practice/issues"
+  },
+  "homepage": "https://github.com/Sumair198/Expressjs-practice#readme"
 }
