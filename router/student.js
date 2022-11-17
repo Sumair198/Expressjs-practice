@@ -21,7 +21,7 @@ const router = express.Router()
 
 //Controller example
 const home = require('../controller/homeController')
-// router.get('/controller',home)
+
 // Controller example with hbs
 router.get('/controller',home)
 

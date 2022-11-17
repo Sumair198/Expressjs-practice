@@ -307,16 +307,21 @@
 //     res.send('Response')
 // })
 
+//important code 
 //Controller / file k andr controller banaya hy / use hbs to get html file
 const express = require('express')
 const app = express()
 const port = process.env.PORT || '5000'
 const route = require('./router/student')
 
+//set template engine
 app.set('view engine','hbs')// hbs example
+
 //load routes
-app.use('/cExample1',route) //simple controller example
+app.use('/',route) //simple controller example
 
 app.listen(port, () => {
     console.log(`Server listening at port ${port}`)
 })
+
+
